@@ -1,0 +1,164 @@
+*{box-sizing: border-box;}
+img{
+  width: 85%;
+  border-radius: 10px;
+}
+button {
+  background: url(./assets/blob-haikei.svg);
+  background-size: 100% 100%;
+  margin: 1rem;
+  color: #0B032D;
+  font-size: calc(5px + 1vmin);
+  padding: 1.5rem 2.5rem;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  font-family: 'Luckiest Guy', cursive;
+}
+button:active,button:hover{
+  filter: invert(1);
+}
+h1{
+  font-size: 3rem;
+}
+h3{
+  font-size: 1.5rem;
+}
+header{
+  background: url(./assets/parabolic-triangle.svg);
+  background-size: cover;
+  color: #FFFAFF;
+  padding: 2rem 0;
+}
+header h1{
+  margin: 0;
+  font-family: 'Luckiest Guy', cursive;
+  letter-spacing: 0.1rem;
+  text-shadow:
+    0.4px 0px 1.1px rgba(0, 0, 0, 0.07),
+    0.9px 0px 2.4px rgba(0, 0, 0, 0.102),
+    1.5px 0px 4.1px rgba(0, 0, 0, 0.126),
+    2.2px 0px 6.3px rgba(0, 0, 0, 0.146),
+    3.1px 0px 9.1px rgba(0, 0, 0, 0.165),
+    4.3px 0px 13.1px rgba(0, 0, 0, 0.184),
+    6.1px 0px 18.8px rgba(0, 0, 0, 0.204),
+    9px 0px 28px rgba(0, 0, 0, 0.228),
+    14.3px 0px 45.3px rgba(0, 0, 0, 0.26),
+    27px 0px 86px rgba(0, 0, 0, 0.33)
+  ;
+}
+.App {
+  text-align: center;
+}
+form{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.8);
+}
+input{
+  color: #FFFAFF;
+  font-size:2.5rem;
+  background-color:rgba(0,0,0,0.0) ;
+  margin: 0 0 2rem 0;
+  border: none;
+  outline: none;
+  background:
+    linear-gradient(currentColor 0 0) left  var(--p, 50%) bottom 0 /var(--d, 20%) 3px no-repeat,
+    linear-gradient(currentColor 0 0) right var(--p, 50%) bottom 0 /var(--d, 20%) 3px no-repeat;
+    transition: 0.3s, background-position 0.3s 0.3s;
+    text-align: center;
+}
+input:focus{
+  --d: 50%;
+  --p: 50.1%;
+  transition:
+    cubic-bezier(0, 500, 1, 500) 0.3s,
+    background-size 0.3s 0.3s
+  ;
+}
+.formContent{
+  font-family: 'Luckiest Guy', cursive;
+  letter-spacing: 0.1rem;
+  background: url(./assets/spectrum-gradient.svg);
+  background-size: 100% 100%;
+  width: 60%;
+  padding: 5rem;
+  background: rgb(210,44,206);
+  background: linear-gradient(90deg, rgba(210,44,206,1) 0%, rgba(216,49,91,1) 23%, rgba(216,49,165,1) 100%);
+  color: #FFFAFF;
+  border-radius: 100px;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+  animation-timing-function: cubic-bezier(0.42, 0, 0.65, 1.6) ;
+}
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+.content{
+  display: flex;
+  flex-direction: row;
+}
+
+.dontShow{
+  display: none;
+}
+.basket{
+  width: 60%;
+  height: 100vh;
+  padding: 5vw 6vw;
+  background-color: #0B032D;
+  background: url(./assets/large-triangles.svg);
+  color: #FFFAFF;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.gridArea1{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  width: 100%;
+}
+.gridArea2{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+  width: 100%;
+}
+.card{
+  margin: 1rem;
+  padding: 2rem 1rem;
+  background: url(./assets/spectrum-gradient.svg);
+  background-size: cover;
+  border-radius: 10px;
+  color: #0B032D;
+  justify-self: center;
+}
+.favs{
+  width: 40%;
+  height: 100vh;
+  padding: 5vw 6vw;
+  background: url(./assets/spectrum-gradient-light.svg);
+  background-size: cover;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.fallingBox{
+  width: 300px;
+}
+.favs .card{
+  width: 70%;
+  background: url(./assets/spectrum-gradient-dark.svg);
+  background-size: cover;
+  color: #FFFAFF;
+  animation-name: zoom;
+  animation-duration: 0.4s;
+  animation-timing-function: cubic-bezier(0.42, 0, 0.65, 1.6) ;
+}
+
